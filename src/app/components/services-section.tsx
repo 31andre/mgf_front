@@ -5,25 +5,25 @@ import { Clock, MapPin, Users, Music, Baby, GraduationCap, Heart } from "lucide-
 export function ServicesSection() {
   const services = [
     {
-      title: "Culte Dominical",
-      time: "Dimanche 10h00",
-      description: "Service principal avec louange, prédication et communion fraternelle",
+      title: "PRIERE D’INTERCESSION",
+      time: "TOUS LES MERCREDI DE 19H-20H",
+      description: "NOUS T’INVITONS À PARTICIPER A SES DIFFÉRENTS PROGRAMMES",
       icon: Users,
-      location: "Sanctuaire principal",
+      location: "AU TEMPLE DE LA MISSION GLORIEUSE DE LA FOI, A COCODY FAYA",
     },
     {
-      title: "École du Dimanche",
-      time: "Dimanche 9h00",
-      description: "Enseignement biblique adapté à tous les âges",
+      title: "CULTE DU SOIR",
+      time: "TOUS LES VENDREDI DE 19H-21H",
+      description: "NOUS T’INVITONS À PARTICIPER A SES DIFFÉRENTS PROGRAMMES",
       icon: GraduationCap,
-      location: "Salles de classe",
+      location: "AU TEMPLE DE LA MISSION GLORIEUSE DE LA FOI, A COCODY FAYA",
     },
     {
-      title: "Soirée de Prière",
-      time: "Mercredi 19h00",
-      description: "Temps de prière collective et intercession",
+      title: "CULTE D’ADORATION ET DE LOUANGE",
+      time: "TOUS LES DIMANCHE DE 9H00-12H",
+      description: "NOUS T’INVITONS À PARTICIPER A SES DIFFÉRENTS PROGRAMMES",
       icon: Heart,
-      location: "Salle de prière",
+      location: "AU TEMPLE DE LA MISSION GLORIEUSE DE LA FOI, A COCODY FAYA",
     },
     {
       title: "Louange & Adoration",
@@ -82,7 +82,7 @@ export function ServicesSection() {
                       <MapPin className="h-4 w-4 mr-2" />
                       {service.location}
                     </div>
-                    <p className="text-muted-foreground text-sm leading-relaxed text-pretty">{service.description}</p>
+                    <p className="text-muted-foreground text-sm leading-relaxed text-pretty lowercase">{service.description}</p>
                   </div>
                 </CardContent>
               </Card>

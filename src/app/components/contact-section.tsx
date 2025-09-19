@@ -27,9 +27,7 @@ export function ContactSection() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  123 Avenue de la Paix
-                  <br />
-                  75015 Paris, France
+                  MISSION GLORIEUSE DE LA FOI, A COCODY FAYA
                 </p>
               </CardContent>
             </Card>

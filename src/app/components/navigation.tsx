@@ -44,7 +44,7 @@ export function Navigation() {
           <div className="hidden lg:flex items-center space-x-4 text-sm text-muted-foreground">
             <div className="flex items-center space-x-1">
               <Phone className="h-4 w-4" />
-              <span>+33 1 23 45 67 89</span>
+              <a href="tel:+22507581397">+225 07 58 13 97 / 07 08 26 65 57</a>
             </div>
           </div>
 
