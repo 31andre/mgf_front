@@ -8,10 +8,10 @@ import { ServicesSection } from "./components/services-section";
 import { TestimonialsSection } from "./components/testimonials-section";
 
 
-
+ 
 export default function Home() { 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen"> 
       <Navigation />
       <HeroSection />
       <AboutSection />
