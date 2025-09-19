@@ -56,7 +56,7 @@ export function AboutSection2() {
           </div>
           <div>
             <img
-              src="/images/IMG009.png"
+              src="/images/pst_modele_1.png"
               alt="Congrégation diverse priant ensemble"
               className="w-full h-96 object-cover rounded-lg shadow-lg"
             />

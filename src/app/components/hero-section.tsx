@@ -5,11 +5,12 @@ export function HeroSection() {
   return (
     <section id="accueil" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <img
+        <div className="w-full h-full object-cover scale-105 transition-transform duration-[20s] ease-out hover:scale-100 bg-primary"></div>
+        {/* <img
           src="/peaceful-church-interior-with-warm-lighting-and-wo.jpg"
           alt="Intérieur paisible de l'église"
           className="w-full h-full object-cover scale-105 transition-transform duration-[20s] ease-out hover:scale-100"
-        />
+        /> */}
         <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-primary/20"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent"></div>
       </div>
