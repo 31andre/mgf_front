@@ -10,9 +10,13 @@ import { HeroSection } from "./components/hero-section";
 import { Navigation } from "./components/navigation";
 import { ServicesSection } from "./components/services-section";
 import { TestimonialsSection } from "./components/testimonials-section";
+import { MonthlyTermToast } from "./components/monthly-term-toast";
 
  
 export default function Home() { 
+
+    const monthlyTerm = "La Conquêtte";
+
 
   return (
     <main className="min-h-screen"> 
@@ -25,6 +29,7 @@ export default function Home() {
       <TestimonialsSection />
       <ContactSection />
       <Footer />
+      <MonthlyTermToast term={monthlyTerm} />
     </main>
   )
 }
