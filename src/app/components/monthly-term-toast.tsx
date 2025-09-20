@@ -7,7 +7,7 @@ interface MonthlyTermToastProps {
   duration?: number; // en ms
 }
 
-export function MonthlyTermToast({ term, duration = 50000 }: MonthlyTermToastProps) {
+export function MonthlyTermToast({ term, duration = 10000 }: MonthlyTermToastProps) {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
@@ -18,8 +18,12 @@ export function MonthlyTermToast({ term, duration = 50000 }: MonthlyTermToastPro
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-5 left-5 bg-primary/90 text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-slide-in">
-      <span className="font-semibold"></span> Thème du mois : {term}
-    </div>
+   <div className="fixed bottom-20 left-1/2 transform -translate-x-1/2 bg-primary/90 text-white px-8 py-3 rounded-lg shadow-lg z-50 text-center animate-bounce
+  w-[90vw] md:w-auto">
+  <span className="font-bold">{term}</span>
+</div>
+
+
+
   );
 }

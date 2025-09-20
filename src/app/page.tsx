@@ -15,7 +15,7 @@ import { MonthlyTermToast } from "./components/monthly-term-toast";
  
 export default function Home() { 
 
-    const monthlyTerm = "La Conquêtte";
+    const monthlyTerm = "2025 ANNEE DU CIEL OUVERT";
 
 
   return (

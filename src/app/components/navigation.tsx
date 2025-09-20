@@ -1,13 +1,18 @@
 "use client"
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Menu, X, Church, Phone } from "lucide-react"
+import { Home, Briefcase, Calendar, Mail, Phone } from "lucide-react"
 
 export function Navigation() {
-  const [isOpen, setIsOpen] = useState(false)
+  // Mobile: icônes (remplace "Contact" par téléphone)
+  const mobileNavItems = [
+    { href: "#accueil", label: "Accueil", icon: Home },
+    { href: "#services", label: "Services", icon: Briefcase },
+    { href: "#evenements", label: "Événements", icon: Calendar },
+    { href: "tel:+2250758861397", label: "Téléphone", icon: Phone },
+  ]
 
-  const navItems = [
+  // Desktop: liens textuels (inclut "Contact")
+  const desktopNavItems = [
     { href: "#accueil", label: "Accueil" },
     { href: "#a-propos", label: "À Propos" },
     { href: "#services", label: "Services" },
@@ -17,63 +22,59 @@ export function Navigation() {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex items-center space-x-2">
-            {/* <Church className="h-8 w-8 text-primary" /> */}
-            <img src="/mfg_logo_sans_fond.png" width="50px" height="50px" />
-            <span className="font-bold text-xl text-foreground">MISSION GLORIEUSE DE FOI</span>
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>
-
-          {/* Contact Info */}
-          <div className="hidden lg:flex items-center space-x-4 text-sm text-muted-foreground">
-            <div className="flex items-center space-x-1">
-              <Phone className="h-4 w-4" />
-              <a href="tel:+22507581397">+225 07 58 13 97 / 07 08 26 65 57</a>
+    <>
+      {/* Header (Desktop) */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/60 backdrop-blur-md border-b border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            {/* Logo + Title */}
+            <div className="flex items-center space-x-3">
+              <img src="/mfg_logo_sans_fond.png" width="45" height="45" />
+              <span className="font-bold text-lg sm:text-xl text-foreground">
+                MISSION GLORIEUSE DE FOI
+              </span>
             </div>
-          </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <Button variant="ghost" size="sm" onClick={() => setIsOpen(!isOpen)} className="text-foreground">
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </Button>
-          </div>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-background border-t border-border">
-              {navItems.map((item) => (
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-8">
+              {desktopNavItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
-                  className="block px-3 py-2 text-foreground hover:text-primary transition-colors duration-200"
-                  onClick={() => setIsOpen(false)}
+                  className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
                 >
                   {item.label}
                 </a>
               ))}
             </div>
+
+            {/* Numéro affiché à droite */}
+            <div className="hidden lg:flex items-center space-x-4 text-sm text-muted-foreground">
+              <div className="flex items-center space-x-1">
+                <Phone className="h-4 w-4" />
+                <a href="tel:+2250758861397">+225 07 58 86 13 97 / 07 08 26 65 57</a>
+              </div>
+            </div>
           </div>
-        )}
+        </div>
+      </nav>
+
+      {/* Bottom Navigation (Mobile) */}
+      <div className="fixed bottom-3 left-1/2 -translate-x-1/2 z-50 bg-background/70 backdrop-blur-xl border border-border shadow-lg rounded-2xl px-6 py-2 flex justify-around w-[90%] max-w-md md:hidden">
+        {mobileNavItems.map((item) => {
+          const Icon = item.icon
+          return (
+            <a
+              key={item.href}
+              href={item.href}
+              className="flex flex-col items-center text-sm text-muted-foreground hover:text-primary transition-all duration-200 ease-in-out hover:scale-110 active:scale-90"
+            >
+              <Icon className="h-7 w-7 mb-1" />
+              <span className="text-[11px]">{item.label}</span>
+            </a>
+          )
+        })}
       </div>
-    </nav>
+    </>
   )
 }

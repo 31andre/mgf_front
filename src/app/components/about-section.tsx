@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { Users, Heart, Star, Globe, BookOpen } from "lucide-react"
+import { Facebook, Instagram, Youtube, MessageCircle, Heart, Users, BookOpen} from "lucide-react"
 
 export function AboutSection() {
   return (
@@ -64,39 +64,41 @@ export function AboutSection() {
         </div>
 
         {/* Statistics */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <Card className="text-center">
-            <CardContent className="p-6">
-              <Users className="h-8 w-8 text-primary mx-auto mb-2" />
-              <div className="text-2xl font-bold text-foreground">500+</div>
-              <div className="text-sm text-muted-foreground">Membres</div>
-            </CardContent>
-          </Card>
 
-          <Card className="text-center">
-            <CardContent className="p-6">
-              <Star className="h-8 w-8 text-primary mx-auto mb-2" />
-              <div className="text-2xl font-bold text-foreground">20+</div>
-              <div className="text-sm text-muted-foreground">Années</div>
-            </CardContent>
-          </Card>
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <Card className="text-center">
+        <CardContent className="p-6">
+          <Facebook className="h-8 w-8 text-primary mx-auto mb-2" />
+          <div className="text-2xl font-bold text-foreground">10k+</div>
+          <div className="text-sm text-muted-foreground">Facebook</div>
+        </CardContent>
+      </Card>
 
-          <Card className="text-center">
-            <CardContent className="p-6">
-              <Heart className="h-8 w-8 text-primary mx-auto mb-2" />
-              <div className="text-2xl font-bold text-foreground">15</div>
-              <div className="text-sm text-muted-foreground">Ministères</div>
-            </CardContent>
-          </Card>
+      <Card className="text-center">
+        <CardContent className="p-6">
+          <Instagram className="h-8 w-8 text-primary mx-auto mb-2" />
+          <div className="text-2xl font-bold text-foreground">8k+</div>
+          <div className="text-sm text-muted-foreground">Instagram</div>
+        </CardContent>
+      </Card>
 
-          <Card className="text-center">
-            <CardContent className="p-6">
-              <Globe className="h-8 w-8 text-primary mx-auto mb-2" />
-              <div className="text-2xl font-bold text-foreground">3</div>
-              <div className="text-sm text-muted-foreground">Missions</div>
-            </CardContent>
-          </Card>
-        </div>
+      <Card className="text-center">
+        <CardContent className="p-6">
+          <Youtube className="h-8 w-8 text-primary mx-auto mb-2" />
+          <div className="text-2xl font-bold text-foreground">5k+</div>
+          <div className="text-sm text-muted-foreground">YouTube</div>
+        </CardContent>
+      </Card>
+
+      <Card className="text-center">
+        <CardContent className="p-6">
+          <MessageCircle className="h-8 w-8 text-primary mx-auto mb-2" />
+          <div className="text-2xl font-bold text-foreground">2k+</div>
+          <div className="text-sm text-muted-foreground">WhatsApp</div>
+        </CardContent>
+      </Card>
+    </div>
+
       </div>
     </section>
   )
