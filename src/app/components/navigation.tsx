@@ -31,7 +31,7 @@ export function Navigation() {
             <div className="flex items-center space-x-3">
               <img src="/mfg_logo_sans_fond.png" width="45" height="45" />
               <span className="font-bold text-lg sm:text-xl text-foreground">
-                MISSION GLORIEUSE DE FOI
+                MISSION GLORIEUSE DE LA FOI
               </span>
             </div>
 
