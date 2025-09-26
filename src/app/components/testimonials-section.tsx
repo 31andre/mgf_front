@@ -94,7 +94,7 @@ export function TestimonialsSection() {
                       </div>
 
                       <p className="text-muted-foreground leading-relaxed text-pretty flex-1">
-                        "{testimonial.content}"
+                        &quot;{testimonial.content}&quot;
                       </p>
                     </div>
 
@@ -121,7 +121,7 @@ export function TestimonialsSection() {
               Votre Témoignage Nous Intéresse
             </h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto text-pretty leading-relaxed">
-              Avez-vous vécu une transformation dans votre vie grâce à votre foi ? Nous aimerions entendre votre histoire et la partager pour encourager d'autres personnes.
+              Avez-vous vécu une transformation dans votre vie grâce à votre foi ? Nous aimerions entendre votre histoire et la partager pour encourager d&apos;autres personnes.
             </p>
             <Button variant="outline" size="lg" className="text-lg px-8 py-3 bg-transparent">
               Partager mon témoignage

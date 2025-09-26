@@ -1,6 +1,7 @@
 "use client"
 
 import { Home, Briefcase, Calendar, Mail, Phone } from "lucide-react"
+import Image from "next/image";
 
 export function Navigation() {
   // Mobile: icônes (remplace "Contact" par téléphone)
@@ -29,7 +30,8 @@ export function Navigation() {
           <div className="flex justify-between items-center h-16">
             {/* Logo + Title */}
             <div className="flex items-center space-x-3">
-              <img src="/mfg_logo_sans_fond.png" width="45" height="45" />
+              <Image src="/mfg_logo_sans_fond.png" width={45} height={45} alt="Logo MFG" />
+              {/* <img src="/mfg_logo_sans_fond.png" width="45" height="45" /> */}
               <span className="font-bold text-lg sm:text-xl text-foreground">
                 MISSION GLORIEUSE DE LA FOI
               </span>
@@ -52,7 +54,7 @@ export function Navigation() {
             <div className="hidden lg:flex items-center space-x-4 text-sm text-muted-foreground">
               <div className="flex items-center space-x-1">
                 <Phone className="h-4 w-4" />
-                <a href="tel:+2250758861397">+225 07 58 86 13 97 / 07 08 26 65 57</a>
+                <a href="tel:+2250758861397">+225 07 58 86 13 97</a>
               </div>
             </div>
           </div>
